@@ -52,12 +52,11 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
   # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
 end
 
 group :production do #adds ability to use PG for production heroku deployment, dont't forget to comment out sqlite3 and put in test/dev if you are using it there. Then CLI bundle install --without production
   gem 'pg'
-  gem 'rails_12factor'
+  # gem 'rails_12factor'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
