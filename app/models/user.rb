@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_one :payment
+  accepts_nested_attributes_for :payment #because hit payments through user table in the form
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable, :confirmable,
